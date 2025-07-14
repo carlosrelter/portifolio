@@ -17,7 +17,18 @@ html{
     --clear: #e2e8f0;
     --glass: rgb(255, 255, 255, 0.1);
     --back-ground-card:  rgb(255, 255, 255, 0.05);
+    --navbar:rgb(15, 23, 42, 0.8);
 }
+
+ [data-theme="light"] {
+     --more-darker: #bec3f3;
+     --clear: black;
+     --dark: #dbe8f9 ;
+     --navbar: rgba(243, 237, 237, 0.933);
+     --glass: rgba(0, 0, 0, 0.1);
+     
+   }
+
 
 body{
     background-color:var(--dark) ;
@@ -27,7 +38,7 @@ body{
 .navegation{
     position: fixed;
     top:0;
-    background-color: rgb(15, 23, 42, 0.8);
+    background-color:var(--navbar);
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
@@ -64,12 +75,12 @@ body{
 }
 
 .home{
-    min-height: 100vh;
+    min-height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #0a0f1c;
+    background-color: var(--more-darker);
 }
 
 .photo-perfil{
@@ -81,8 +92,24 @@ body{
     animation: levitate 5s ease-in-out infinite;
 }
 
+.links{
+    gap: 10px;
+}
+
+.external-link{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.external-link1{
+    width: 46px;
+    height: 46px;
+}
+
 .title{
     text-align: center;
+    font-size: 2rem;
     margin-bottom: 30px;
 }
 
@@ -105,7 +132,6 @@ body{
 
 .about-paragraf{
     text-align: center;
-    /* font-size: 1rem; */
 }
 
 .section-points{
@@ -114,7 +140,7 @@ body{
 
 .section-projects{
     padding: 6rem 2rem;
-    background-color: #0a0f1c;
+    background-color: var(--more-darker);
 }
 
 .projects-box{
@@ -182,7 +208,6 @@ body{
 }
 
 .button-form{
-    color: var(--clear);
     background: linear-gradient(45deg, var(--primary),var(--secondary));
     padding: 1rem 2rem ;
     border:none;
@@ -191,11 +216,14 @@ body{
     font-style: bold;
     width: 100%;
     transition: all 0.5 ease;
+    color: #dbe8f9;
+    font-size: 1rem;
 }
 
 .button-form:hover{
     transform: translateY(-4px);
     box-shadow: 0 5px 15px rgb(79, 70, 229, 0.4);
+    
 }
 
 @keyframes levitate {
@@ -208,8 +236,19 @@ body{
 }
 
 footer{
-    background-color: #0a0f1c;
+    background-color: var(--more-darker);
     font-size: 1rem;
     padding: 20px;
     text-align: center;
+}
+
+.email-edit{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.theme{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
     <title>Carlos</title>
 </head>
 <body>
@@ -20,13 +21,21 @@
             </li>
             <li>
                 <a href="#contact" class="menu-link">Contato</a>
-            </li>            
+            </li>
+            <li><a id="lightModeToggle"><img src="img/theme.png" class="theme" alt="Alterar tema"></a></li>            
         </ul>
     </nav>
     <main id="home" class="home">        
         <img src="img/foto.png" alt="Foto de perfil" class="photo-perfil">
         <h1>Carlos Francisco Relter Pedro</h1>
-        <p>Desenvolvedor FullStack</p>        
+        <p>Desenvolvedor FullStack</p>
+        <div class="links">
+            <p>
+                <a href="https://github.com/carlosrelter"><img class="external-link1" src="img/github.png"> </a>
+                <a href="https://www.linkedin.com/in/carlos-f-relter-pedro-b3378a211/"><img class="external-link" src="img/likedin.png"></a>
+            </p>
+        </div>      
+               
     </main>
     <section id="about" class="section-points">
         <h2 class="title">Sobre Mim</h2>
@@ -68,16 +77,11 @@ Valorizo a <b>qualidade do código</b>, <b>boas práticas</b> de desenvolvimento
     <section id="contact" class="section-points">
         <h2 class="title">Contato</h2>
         <form class="form-contact" id="form">
-            <div class="gruop-form">
-                <input placeholder="nome" class="field-form">
-            </div>
-            <div class="gruop-form">
-                <textarea placeholder="Digite sua Mensagem"  rows="5" class="field-form"></textarea>
-            </div>
-            <button type="submit" class="button-form">Enviar Mensagem</button>
+            <div id="text" class="email-edit">reltercontato@gmail.com</div>
+            <button type="submit" onclick="copyText()" class="button-form">Copiar</button>
         </form>
     </section>
     <footer> reltercontato@gmail.com </footer>
-    
+    <script src="functions.js"></script>
 </body>
 </html>
